@@ -37,7 +37,7 @@ export async function logout() {
     return (window.location.href = '../');
 }
 
-export async function createNewList(item) {
+export async function createItem(item) {
     const response = await client.from('shopping_list').insert(item);
 
     if (response.error) {

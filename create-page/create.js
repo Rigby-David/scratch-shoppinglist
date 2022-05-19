@@ -1,18 +1,18 @@
-import { createNewList } from '../fetch-utils.js';
+import { createItem } from '../fetch-utils.js';
 
 const createForm = document.getElementById('create-form');
 
 createForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = new FormData(createForm);
-    const newList = {
+    const newItem = {
         name: data.get('name'),
         qty: data.get('qty'),
     };
 
-    const response = await createNewList(newList);
+    const response = await createItem(newItem);
     console.log(response);
 
-    // location.replace('/');
+    location.replace('/');
     // window.location.href = '/';
 });
