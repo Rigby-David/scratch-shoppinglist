@@ -14,4 +14,5 @@ createForm.addEventListener('submit', async (e) => {
     console.log(response);
 
     // location.replace('/');
+    // window.location.href = '/';
 });
