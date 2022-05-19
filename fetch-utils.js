@@ -47,6 +47,16 @@ export async function createItem(item) {
     }
 }
 
+export async function fetchListItems() {
+    const response = await client.from('shopping_list').select('*').order('name');
+
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }
