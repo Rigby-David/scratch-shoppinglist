@@ -1,4 +1,4 @@
-import { checkAuth, logout, fetchListItems } from '../fetch-utils.js';
+import { checkAuth, logout, fetchListItems, togglePurchased } from '../fetch-utils.js';
 import { renderItem } from '../render-utils.js';
 
 checkAuth();
@@ -20,8 +20,15 @@ async function displayListItems() {
             const listElem = renderItem(item);
             listElem.addEventListener('click', async (e) => {
                 e.preventDefault();
-                await
+                await togglePurchased(item);
+                displayListItems();
             });
+
+            shoppingListElem.append(listElem);
         }
+    } else {
+        error.textContent = 'oops not logged in';
     }
 }
+
+displayListItems();
