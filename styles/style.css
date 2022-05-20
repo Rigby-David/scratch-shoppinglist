@@ -19,7 +19,8 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: rgb(33, 196, 33);
+    
 }
 
 main {
@@ -51,6 +52,7 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    justify-content: center;
 }
 
 h2 {
@@ -115,6 +117,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 15px;
+    /* position: absolute; */
 }
 
 .auth-container {
@@ -128,4 +132,45 @@ footer {
 
 .auth-container button {
     margin: 10px;
+}
+
+.left {
+    border: 3px dotted greenyellow ;
+    border-width: thick;
+    margin-right: 15px;
+    /* outline: 3px solid rgb(1, 4, 1); */
+    box-shadow:  0 0 0 10px hsl(152, 76%, 54%),
+    0 0 0 15px hsl(120, 20%, 1%);
+    
+}
+
+.right {
+    border: 3px dotted greenyellow;
+    border-width: thick;
+    margin-left: 16px;
+    box-shadow:  0 0 0 10px hsl(152, 76%, 54%),
+    0 0 0 15px hsl(120, 20%, 1%);
+}
+
+label {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border-radius: 5px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+#mall-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
