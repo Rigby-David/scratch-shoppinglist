@@ -14,12 +14,12 @@
 // }
 
 export function renderItem(item) {
-    const div = document.createElement('div');
-    div.textContent = `${item.qty} ${item.name}`;
+    const li = document.createElement('li');
+    li.textContent = `${item.qty} ${item.name}`;
 
     if (item.purchased) {
-        div.classList.add('complete');
+        li.classList.add('complete');
     }
 
-    return div;
+    return li;
 }
