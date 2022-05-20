@@ -1,4 +1,4 @@
-import { createItem } from '../fetch-utils.js';
+import { createItem, checkAuth } from '../fetch-utils.js';
 
 const createForm = document.getElementById('create-form');
 
@@ -16,3 +16,5 @@ createForm.addEventListener('submit', async (e) => {
     location.replace('/');
     // window.location.href = '/';
 });
+
+checkAuth();

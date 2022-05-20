@@ -1,8 +1,8 @@
-import { checkAuth, logout, fetchListItems, togglePurchased } from '../fetch-utils.js';
+import { checkAuth, logout, fetchListItems, togglePurchased, deleteAllListItems } from '../fetch-utils.js';
 import { renderItem } from '../render-utils.js';
 
 checkAuth();
-
+const deleteButton = document.getElementById('delete-button');
 const logoutButton = document.getElementById('logout');
 
 logoutButton.addEventListener('click', () => {
@@ -30,5 +30,10 @@ async function displayListItems() {
         error.textContent = 'oops not logged in';
     }
 }
+
+deleteButton.addEventListener('click', async () => {
+    await deleteAllListItems();
+
+});
 
 displayListItems();
