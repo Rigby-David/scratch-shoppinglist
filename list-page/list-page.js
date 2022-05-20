@@ -33,7 +33,7 @@ async function displayListItems() {
 
 deleteButton.addEventListener('click', async () => {
     await deleteAllListItems();
-
+    displayListItems();
 });
 
 displayListItems();
